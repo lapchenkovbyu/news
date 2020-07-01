@@ -1,0 +1,16 @@
+.articleWrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    .articleHeader {
+        display: flex;
+        justify-content: space-between;
+    }
+    .articleText {
+        display: flex;
+        justify-content: center;
+    }
+}

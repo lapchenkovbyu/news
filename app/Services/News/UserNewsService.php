@@ -18,7 +18,8 @@ class UserNewsService implements NewsServiceInterface
      */
     function getNews(): Collection
     {
-        return Article::addGlobalScope(WithoutHiddenScope::class)->orderBy('created_at', 'desc')->get();
+        return Article::query()->withGlobalScope(WithoutHiddenScope::class, new WithoutHiddenScope())
+            ->orderBy('created_at', 'desc')->get();
     }
 
     /**

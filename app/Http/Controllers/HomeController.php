@@ -10,25 +10,14 @@ use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
-
-    /**
-     * Create a new controller instance.
-     *
-     * @param NewsServiceInterface $newsService
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
+     * @param NewsServiceInterface $newsService
      * @return Renderable
      */
     public function index(NewsServiceInterface $newsService)
     {
-//        dd($newsService);
-        return view('home');
+        return view('home', ['news'=>$newsService->getNews()]);
     }
 }

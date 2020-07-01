@@ -85,7 +85,7 @@
         </main>
 
         <footer>
-            <p>All rights reserved
+            <p class="text-center">All rights reserved
             </p>
         </footer>
     </div>
